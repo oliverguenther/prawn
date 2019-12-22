@@ -307,7 +307,7 @@ module Prawn
     def self.load(document, src, options = {})
       case font_format(src, options)
       when 'ttf' then TTF.new(document, src, options)
-      when 'otf' then OTF.new(document, src, options)
+      when 'otf' then Fonts::OTF.new(document, src, options)
       when 'dfont' then DFont.new(document, src, options)
       when 'ttc' then TTC.new(document, src, options)
       else AFM.new(document, src, options)
